@@ -1,0 +1,40 @@
+/*11.Write a program that would print the information (name, year of joining, salary, address) of three
+employees by creating a class named 'Employee'. The output should be as follows:
+Name Year of joining Address
+Robert 1994 64C- WallsStreat
+Sam 2000 68D- WallsStreat
+John 1999 26B- WallsStreat
+*/
+#include<iostream>
+using namespace std;
+class Employee
+{
+	private:
+		string name, address;
+		int yr, salary;
+		public:
+			void set(string name1, string address1, int yr1, int salary1)
+			{
+			name = name1;
+			address = address1;
+			yr = yr1;
+			salary = salary1;	
+			}
+			void print()
+			{
+				cout<<"\nEmployee name="<<name<<"\nEmployee address="<<address<<"\nEmployee year of joining"<<yr<<"\nEmployee salary"<<salary;
+				
+			}
+};
+main()
+{
+	Employee e;
+	e.set("Robert", "64C-WallsStreat",1994,2000);
+	Employee b;
+	b.set("Sam", "68D-WallsStreat", 2000, 4000);
+	Employee c;
+	c.set("John", "26B-WallsStreat", 1999, 5000);
+	e.print();
+	b.print();
+	c.print();
+}

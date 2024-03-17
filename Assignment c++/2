@@ -1,0 +1,40 @@
+/*2.Assign and print the roll number, phone number and address of two students having names "Sam"
+and "John" respectively by creating two objects of the class 'Student'.
+*/
+#include<iostream>
+#include<string.h>
+using namespace std;
+class student
+{
+	private:
+		int rno;
+		int pno;
+		char add[40];
+		public:
+			student(int x,int y, char s[])
+			{
+				rno=x;
+				pno=y;
+				strcpy(add,s);
+				
+			}
+			
+			void show()
+			{
+				cout<<"\nRoll.no:"<<rno;
+				cout<<"\nphone.no:"<<pno;
+				cout<<"\nAddress:"<<add;
+			}
+};
+main()
+{
+	student sam(02,8459632564,"Mumbai");
+	student john(03,9654832564,"Nashik");
+	cout<<"\nDetails of students:";
+	cout<<"\n-------------------";
+	cout<<"\nDetails of sam:";
+	sam.show();
+	cout<<"\n-------------------";
+	cout<<"\nDetails of john:";
+	john.show();
+}

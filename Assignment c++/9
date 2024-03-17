@@ -1,0 +1,70 @@
+/*9.Print the sum, difference and product of two complex numbers by creating a class named 'Complex'
+with separate functions for each operation whose real and imaginary parts are entered by the user.
+*/
+#include <iostream>
+using namespace std;
+
+class Complex 
+{
+private:
+    float real;
+    float imag;
+
+public:
+    Complex(float r, float i) {
+        real = r;
+        imag = i;
+    }
+
+    Complex add(Complex other) {
+        float sum_real = real + other.real;
+        float sum_imag = imag + other.imag;
+        return Complex(sum_real, sum_imag);
+    }
+
+    Complex subtract(Complex other) {
+        float diff_real = real - other.real;
+        float diff_imag = imag - other.imag;
+        return Complex(diff_real, diff_imag);
+    }
+
+    Complex multiply(Complex other) {
+        float prod_real = (real * other.real) - (imag * other.imag);
+        float prod_imag = (real * other.imag) + (imag * other.real);
+        return Complex(prod_real, prod_imag);
+    }
+
+    void display() {
+        cout << real << " + " << imag << "i" << endl;
+    }
+};
+
+main()
+ {
+    float real1, imag1, real2, imag2;
+
+    cout << "Enter the real part of the first complex number: ";
+    cin >> real1;
+    cout << "Enter the imaginary part of the first complex number: ";
+    cin >> imag1;
+
+    cout << "Enter the real part of the second complex number: ";
+    cin >> real2;
+    cout << "Enter the imaginary part of the second complex number: ";
+    cin >> imag2;
+
+    Complex complex1(real1, imag1);
+    Complex complex2(real2, imag2);
+
+    Complex sum_result = complex1.add(complex2);
+    Complex diff_result = complex1.subtract(complex2);
+    Complex prod_result = complex1.multiply(complex2);
+
+    cout << "Sum: ";
+    sum_result.display();
+    cout << "Difference: ";
+    diff_result.display();
+    cout << "Product: ";
+    prod_result.display();
+
+}

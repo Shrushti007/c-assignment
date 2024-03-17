@@ -1,0 +1,31 @@
+/*3.Write a program to print the area and perimeter of a triangle having sides of 3, 4 and 5 units by
+creating a class named 'Triangle' with a function to print the area and perimeter.
+*/
+#include<iostream>
+using namespace std;
+class Triangle
+{
+	private:
+	int a,b,c,area,perimeter;
+	public:
+		void get()
+		{
+		  cout<<"\nEnter size of triangle";
+		  cin>>a>>b>>c;
+		  area=b*a/2;
+		  perimeter=a+b+c;	
+		}
+		void show()
+		{
+			cout<<"\nSize of triangle is= "<<"\nA="<<a<<"\nB"<<b<<"\nC"<<c;
+			cout<<"\nArea of triangle is = "<<area;
+			cout<<"\nPerimeter of triangle is = "<<perimeter;
+		}
+	
+};
+main()
+{
+	Triangle A1;
+	A1.get();
+	A1.show();	
+}

@@ -1,0 +1,30 @@
+/*8.Print the average of three numbers entered by the user by creating a class named 'Average' having a
+function to calculate and print the average without creating any object of the Average class.
+ 
+*/
+#include<iostream>
+using namespace std;
+class Average
+{
+	private:
+		int a,b,c,total,avg;
+		public:
+			void cal()
+			{
+				cout<<"\nenter value for 3 no:";
+				cin>>a>>b>>c;
+				total=a+b+c;
+				avg=total/3;
+			}
+			void display()
+			{
+				cout<<"\nAverage:"<<avg;
+			}
+};
+main()
+{
+	Average x;
+	x.cal();
+	x.display();
+	
+}

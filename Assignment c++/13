@@ -1,0 +1,41 @@
+/*13.Write a program to print the roll number and average marks of 8 students in three subjects (each
+out of 100). The marks are entered by the user and the roll numbers are automatically assigned.
+*/
+#include<iostream>
+using namespace std;
+
+struct student
+{
+    char name[50];
+    int roll;
+    float marks,avg;
+} s[8];
+
+main()
+{
+	
+    cout << "\nEnter information of students: ";
+    for(int i = 0; i < 8; ++i)
+    {
+        s[i].roll = i+1;
+        cout << "\nFor roll number" << s[i].roll << "," ;
+
+        cout << "Enter name: ";
+        cin >> s[i].name;
+
+        cout << "Enter marks: ";
+        cin >> s[i].marks;
+
+        cout << "\n=============";
+    }
+
+    cout << "Displaying Information: " ;
+
+    for(int i = 0; i < 8; ++i)
+    {
+        cout << "\nRoll number: " << i+1 ;
+        cout << "Name: " << s[i].name;
+        cout << "Marks: " << s[i].marks;
+    }
+	
+}
